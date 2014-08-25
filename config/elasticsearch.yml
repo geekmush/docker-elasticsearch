@@ -3,3 +3,8 @@ path:
   logs: /data/log
   plugins: /data/plugins
   work: /data/work
+index:
+  number_of_shards: 8
+  number_of_replicas: 1
+cluster:
+  name: GeekMush

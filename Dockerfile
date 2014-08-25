@@ -13,7 +13,9 @@ RUN \
   wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.2.tar.gz && \
   tar xvzf elasticsearch-1.3.2.tar.gz && \
   rm -f elasticsearch-1.3.2.tar.gz && \
-  mv /tmp/elasticsearch-1.3.2 /elasticsearch
+  mv /tmp/elasticsearch-1.3.2 /elasticsearch && \
+  /elasticsearch/bin/plugin -install lmenezes/elasticsearch-kopf/1.2 && \
+  /elasticsearch/bin/plugin -install royrusso/elasticsearch-HQ
 
 # Define mountable directories.
 VOLUME ["/data"]
