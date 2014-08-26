@@ -3,11 +3,12 @@
 function add_es_master {
 cat >>/elasticsearch/config/elasticsearch.yml <<EEOF
 
+cluster:
+  name: ${ES_CLUSTERNAME}
 discovery:
   zen:
     ping:
-      unicast:
-        ${ES1_PORT_9300_TCP_ADDR}
+      unicast: ${ES1_PORT_9300_TCP_ADDR}
 EEOF
 }
 
